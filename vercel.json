@@ -40,7 +40,15 @@
       "dest": "index.js"
     },
     {
-      "src": "/hotels",
+      "src": "/hotels/find/(.*)",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/hotels/countBycity/(.*)",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/hotels/countBytype//(.*)",
       "dest": "build/index.html"
     },
     {
