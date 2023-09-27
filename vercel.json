@@ -11,12 +11,45 @@
   ],
   "routes": [
     {
-      "src": "/products",
+      "src": "/hotels",
       "dest": "index.js"
     },
     {
-      "src": "/products/(.*)",
+      "src": "/users",
       "dest": "index.js"
+    },
+    {
+      "src": "/rooms",
+      "dest": "index.js"
+    },
+    {
+      "src": "/auth",
+      "dest": "index.js"
+    },
+
+    {
+      "src": "/hotels/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/auth/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/users/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/rooms/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/hotels",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/hotels",
+      "dest": "build/index.html"
     },
     {
       "src": "/hotels",
@@ -25,10 +58,6 @@
     {
       "src": "/",
       "dest": "build/index.html"
-    },
-    {
-      "src": "/(.+)",
-      "dest": "build/$1"
     }
   ]
 }
