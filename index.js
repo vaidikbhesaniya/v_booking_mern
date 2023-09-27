@@ -10,7 +10,6 @@ import usersRoute from "./routes/users.js";
 import hotelRoute from "./routes/hotels.js";
 import cookieParser from "cookie-parser";
 
-
 app.use(cors());
 const connect = async () => {
   try {
@@ -32,6 +31,9 @@ app.use("/users", usersRoute);
 app.use("/hotels", hotelRoute);
 
 app.use("/rooms", roomsRoute);
+app.use("*", (req, res) => {
+  res.sendFile(__dirname + "/build/index.html");
+});
 
 // mongoose.connection.on("disconnected", () => {
 //   console.log("mongodb disconnected");
