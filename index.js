@@ -3,18 +3,20 @@ import morgan from "morgan";
 import cors from "cors";
 const app = express();
 import mongoose from "mongoose";
-import dotenv from "dotenv";
+
 import authRoute from "./routes/auth.js";
 import roomsRoute from "./routes/rooms.js";
 import usersRoute from "./routes/users.js";
 import hotelRoute from "./routes/hotels.js";
 import cookieParser from "cookie-parser";
 
-dotenv.config();
+
 app.use(cors());
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGO);
+    await mongoose.connect(
+      "mongodb+srv://vaidik:YB7zqWjjzOmKogTt@cluster0.xa8kqvp.mongodb.net/myfirstdatabase?retryWrites=true&w=majority"
+    );
     console.log("connected to mongodb");
   } catch (err) {
     throw err;
